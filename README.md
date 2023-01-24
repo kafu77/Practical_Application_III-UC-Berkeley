@@ -60,7 +60,17 @@ A seaborn from the heatmap plot the 'euribor3m' and 'emp.var.rate' have the high
 
 
 ##Engineering features:
-Using the bank information features, an encoding data transformation has been applied. The transformation tools are imported from the machine learning package called a scikit learn. A OneHotEncoder has been used to the 'job','marital','default','housing','loan','contact','month','day_of_week’, and 'poutcome' attributes. The 'education' data set has been encoded by Oridinal Encoder. Then, a pipeline has been prepared for each classifier. The K Nearest Neighbor, Decision tree, and Support Vector Machine pipeline includes transformer and model, but the Logistic Regression pipeline have an extractor on top of the transformer and model.
+
+Using the bank information features, an encoding data transformation has been applied. The transformation tools are imported from the machine learning package called a scikit learn. A OneHotEncoder has been used to the 'job','marital','default','housing','loan','contact','month','day_of_week’, and 'poutcome' attributes. The 'education' data set has been encoded by Oridinal Encoder. Then, a pipeline has been prepared for each classifier. The K Nearest Neighbor, Decision tree, and Support Vector Machine pipeline includes transformer and model, but the Logistic Regression pipeline have an extractor on top of the transformer and model. Finally, the data prepared into X and y data set. X has all features and y has the desired target. The data then splits into train and test data set by using a tool from the scikit learning preprocessing tools.
+
+##Baseline Model:
+
+The baseline model is simple model that acts as a comparison. Moreover, the baseline model should be based on the dataset to create the actual model. It helps to compare the complex model result. With the baseline model, we could assess whether we need a complex model or the simple one already working for the business. There are two categories to calculate the baseline model, either use a Simple Baseline Model or Machine Learning Baseline Model. A dummy classifier froim the scikit learning packages are used to gererated a baseline results. A different result of metrics based on the different dummy classifier strategy has been generated. Since the class of the data set are nor balnce, a stratified strategy is suitable for imbalanced data as it reflects the actual distribution. The accuracy of the dummy classifier is  0.805778101480942. Therefore this accuracy result is used as a benchmark for our complex models. 
+
+
+
+
+
 
 
 
