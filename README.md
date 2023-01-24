@@ -85,6 +85,7 @@ The time taken to train Logistic Regression, KNN, Decision Tree, and SVM model i
 In this problem, the Decision tree model is overfitting based on the default parameters. But the model quick back when tuned the hyperparameters. The logistic Regression model is well performed in terms of the accuracy and training time. KNN and SVM model are also well performed on the default parameters. But they took longer time to learn on when a grid search applied.
 
 ##Recommendation:
+
 The Logistic Regression model is the best model on both accuracy and time.
 
 
