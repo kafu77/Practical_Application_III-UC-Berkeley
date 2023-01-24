@@ -45,3 +45,11 @@ There are four datasets:
 The smallest datasets are provided to test more computationally demanding machine learning algorithms (e.g., SVM).
 The classification goal is to predict if the client will subscribe (yes/no) a term deposit (variable y).
 
+exploratory data anaylysis and data visualization:
+
+An exploratory data anaylysis and data visualization have been done to clearly understand the relationship among the dataset and thier trends. The 
+mtplotlib graph of the data set are not symmetrical. The graph is skewed to the right, most of the data falls to the right of the graph's peak, that mean the  mean > median > mode.However, the distribution is become almost symetrical on the logarithmic transformed data set. A seaborn Kernel Density Estimate (KDE) Plot also utilized to estimate the probability density function of the continuous age data set. The plot has beed used on the tranformed dataset. A plotly histogram, seaborn pairplot,seaborn joint plot, seaborn bar plot, seaborn box plot, and seaborn heatmap plot are utilized for a better visualization to understand the data relationshoip. 
+A seaborn from the heatmap plot the 'euribor3m' and 'emp.var.rate' have the highset strong positive relationship. On the other hand  the 'previous' and 'emp.var.rate' have a strong negative relationship. A boxplot helps to easily graps the average numbers of the jobs those are subscribed or not. The retired have got an average age highest age who subscribed the term deposite. 
+
+
+
