@@ -8,6 +8,7 @@ The data is related with direct marketing campaigns of a Portuguese banking inst
 
 Attribute Information:
 Input variables:
+
 ##bank client data:
 
 1 - age (numeric)
@@ -24,12 +25,14 @@ Input variables:
 9 - month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')
 10 - day_of_week: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')
 11 - duration: last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.
+
 ##other attributes:
 
 12 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
 13 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric; 999 means client was not previously contacted)
 14 - previous: number of contacts performed before this campaign and for this client (numeric)
 15 - poutcome: outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')
+
 ##social and economic context attributes
 
 16 - emp.var.rate: employment variation rate - quarterly indicator (numeric)
@@ -50,11 +53,15 @@ There are four datasets:
 The smallest datasets are provided to test more computationally demanding machine learning algorithms (e.g., SVM).
 The classification goal is to predict if the client will subscribe (yes/no) a term deposit (variable y).
 
-exploratory data anaylysis and data visualization:
+##Exploratory data anaylysis and data visualization:
 
-An exploratory data anaylysis and data visualization have been done to clearly understand the relationship among the dataset and thier trends. The 
-mtplotlib graph of the data set are not symmetrical. The graph is skewed to the right, most of the data falls to the right of the graph's peak, that mean the  mean > median > mode.However, the distribution is become almost symetrical on the logarithmic transformed data set. A seaborn Kernel Density Estimate (KDE) Plot also utilized to estimate the probability density function of the continuous age data set. The plot has beed used on the tranformed dataset. A plotly histogram, seaborn pairplot,seaborn joint plot, seaborn bar plot, seaborn box plot, and seaborn heatmap plot are utilized for a better visualization to understand the data relationshoip. 
-A seaborn from the heatmap plot the 'euribor3m' and 'emp.var.rate' have the highset strong positive relationship. On the other hand  the 'previous' and 'emp.var.rate' have a strong negative relationship. A boxplot helps to easily graps the average numbers of the jobs those are subscribed or not. The retired have got an average age highest age who subscribed the term deposite. 
+An exploratory data analysis and data visualization have been done to clearly understand the relationship among the dataset and their trends. The matplotlib graph of the data set are not symmetrical. The graph is skewed to the right, most of the data falls to the right of the graph's peak, that mean the mean > median > mode. However, the distribution is become almost symmetrical on the logarithmic transformed data set. A seaborn Kernel Density Estimate (KDE) Plot also utilized to estimate the probability density function of the continuous age data set. The plot has been used on the transformed dataset. A plotly histogram, seaborn pairplot, seaborn joint plot, seaborn bar plot, seaborn box plot, and seaborn heatmap plot are also utilized for a better visualization to understand the data relationship. 
+A seaborn from the heatmap plot the 'euribor3m' and 'emp.var.rate' have the highest strong positive relationship. On the other hand the 'previous' and 'emp.var.rate' have a strong negative relationship. A boxplot helps to easily grasp the average numbers of the jobs those are subscribed or not. The retired have got an average age highest age who subscribed the term deposit.
+
+
+##Engineering features:
+Using the bank information features, an encoding data transformation has been applied. The transformation tools are imported from the machine learning package called a scikit learn. A OneHotEncoder has been used to the 'job','marital','default','housing','loan','contact','month','day_of_week’, and 'poutcome' attributes. The 'education' data set has been encoded by Oridinal Encoder. Then, a pipeline has been prepared for each classifier. The K Nearest Neighbor, Decision tree, and Support Vector Machine pipeline includes transformer and model, but the Logistic Regression pipeline have an extractor on top of the transformer and model.
+
 
 
 
