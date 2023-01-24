@@ -33,7 +33,7 @@ Input variables:
 19 - euribor3m: euribor 3 month rate - daily indicator (numeric)
 20 - nr.employed: number of employees - quarterly indicator (numeric)
 
-#The work:
+# The Task:
 The work starts with the data understanding and data source. The data is collected from the powerful data repository called a UCI machine learning repository.
 The dataset is related with direct markting compaigns (phone calls) of a Portuguess banking institution. 
 
