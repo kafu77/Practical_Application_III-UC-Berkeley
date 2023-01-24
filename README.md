@@ -81,6 +81,7 @@ Eventually, a gridsearchCV has been used to tune the hyperparameters of the mode
 The time taken to train Logistic Regression, KNN, Decision Tree, and SVM model is 13.304939,226.731269, 28.096495, and 202.620631 and their accuracy on the test data set is 0.894796, 0.896820,0.899166, and 0.900542 respectively. The KNN and SVM model took longer to learn the data. But the Logistic regression is better. May, be the reason could be the model did not used many hyperparameters. Decision trees learn the data fast. The model scored 0.900212 on the train data set	and 0.899166 on the test data set. After tunning the hyperparameters the decision gets better results. The other models do not have a big change on the accuracy results from their defualt results. 
 
 ##Findings:
+
 In this problem, the Decision tree model is overfitting based on the default parameters. But the model quick back when tuned the hyperparameters. The logistic Regression model is well performed in terms of the accuracy and training time. KNN and SVM model are also well performed on the default parameters. But they took longer time to learn on when a grid search applied.
 
 ##Recommendation:
